@@ -1,0 +1,99 @@
+chance=12.38
+multiplier=1.45
+base=balance/1000000 --or balance/2000
+preroll=10
+prebet=0.00000001
+stretch=3
+bankroll = 1 -- Minimum you want to keep rolling with.  Set to 0 to use your current balance
+tipamount = 0.1 -- How much to tip
+bankappend = 0.10 -- How much of your tip amount to add to your bankroll over time in %.  0.10 = 10% Set to 0 for no addition to the bankroll
+receiver = "kiltor1" -- Who gets the tip? **** CHANGE THIS ****
+tippedOut = 0
+ 
+function dobet()
+ 
+ 
+ 
+ tmp = currentstreak+preroll
+ if win then
+  nextbet=prebet
+ else
+  if tmp == 0 then
+   nextbet=balance/1000000
+  end
+  if tmp < 0 then
+   if tmp %stretch == 0 then
+    nextbet=previousbet*multiplier
+   end
+  end
+ end
+end
+ 
+if(balance > bankroll + tipamount + (tipamount * bankappend)) then
+            preTipBalance = balance
+            tip(receiver, balance - bankroll - (tipamount * bankappend))
+            sleep(5)
+            bankroll += (tipamount * bankappend)
+            tempstr = "New Bankroll: banker"
+            tempstr = string.gsub(tempstr, "banker", bankroll)
+            print(tempstr)
+            tippedOut = 1          
+            tipamount =+ 0.012
+            print(tipamount)
+
+            end
+
+RAW Paste Data
+chance=12.38
+multiplier=1.45
+base=balance/1000000 --or balance/2000
+preroll=10
+prebet=0.00000001 
+stretch=3
+bankroll = 1 -- Minimum you want to keep rolling with.  Set to 0 to use your current balance 
+tipamount = 0.1 -- How much to tip
+bankappend = 0.10 -- How much of your tip amount to add to your bankroll over time in %.  0.10 = 10% Set to 0 for no addition to the bankroll 
+receiver = "kiltor1" -- Who gets the tip? **** CHANGE THIS ****
+tippedOut = 0
+
+function dobet() 
+
+
+
+ tmp = currentstreak+preroll 
+ if win then 
+  nextbet=prebet 
+ else 
+  if tmp == 0 then 
+   nextbet=balance/1000000 
+  end 
+  if tmp < 0 then
+   if tmp %stretch == 0 then 
+    nextbet=previousbet*multiplier 
+   end 
+  end 
+ end 
+end
+
+if(balance > bankroll + tipamount + (tipamount * bankappend)) then
+			preTipBalance = balance
+			tip(receiver, balance - bankroll - (tipamount * bankappend))
+			sleep(5)
+			bankroll += (tipamount * bankappend)
+			tempstr = "New Bankroll: banker"
+			tempstr = string.gsub(tempstr, "banker", bankroll)
+			print(tempstr)
+			tippedOut = 1			
+			tipamount =+ 0.012
+			print(tipamount)
+		end
+We use cookies for various purposes including analytics. By continuing to use Pastebin, you agree to our use of cookies as described in the Cookies Policy. OK, I Understand
+Not a member of Pastebin yet?
+Sign Up, it unlocks many cool features!
+ 
+create new paste  /  dealsnew!  /  syntax languages  /  archive  /  faq  /  tools  /  night mode  /  api  /  scraping api	
+privacy statement  /  cookies policy  /  terms of service  /  security disclosure  /  dmca  /  contact
+
+By using Pastebin.com you agree to our cookies policy to enhance your experience.
+Site design & logo © 2018 Pastebin; user contributions (pastes) licensed under cc by-sa 3.0 -- Dedicated Server Hosting by Steadfast
+Tuesday 4th of June 2019 10:45:31 PM CDT
