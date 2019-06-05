@@ -87,13 +87,3 @@ if(balance > bankroll + tipamount + (tipamount * bankappend)) then
 			tipamount =+ 0.012
 			print(tipamount)
 		end
-We use cookies for various purposes including analytics. By continuing to use Pastebin, you agree to our use of cookies as described in the Cookies Policy. OK, I Understand
-Not a member of Pastebin yet?
-Sign Up, it unlocks many cool features!
- 
-create new paste  /  dealsnew!  /  syntax languages  /  archive  /  faq  /  tools  /  night mode  /  api  /  scraping api	
-privacy statement  /  cookies policy  /  terms of service  /  security disclosure  /  dmca  /  contact
-
-By using Pastebin.com you agree to our cookies policy to enhance your experience.
-Site design & logo © 2018 Pastebin; user contributions (pastes) licensed under cc by-sa 3.0 -- Dedicated Server Hosting by Steadfast
-Tuesday 4th of June 2019 10:45:31 PM CDT
